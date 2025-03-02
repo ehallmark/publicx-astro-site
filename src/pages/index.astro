@@ -10,9 +10,12 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
-	</body>
-	<script>
-		window.location.href = "https://www.usepublicx.com/home";
+	<body>Redirecting...</body><script>
+		const path = window.location.pathname;
+		if (path === "/" || path === "/index.html" || path === "") {
+			window.location.href = "https://www.usepublicx.com/home";
+		} else {
+			window.location.href = "https://www.usepublicx.com" + path;
+		}
 	</script>
 </html>
